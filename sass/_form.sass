@@ -1,0 +1,32 @@
+@import "base/_mixins"
+form
+	background-color: white
+	width: 500px
+	margin: 70px auto
+	padding: 15px
+	border: 2px solid black
+	border-radius: 8px
+.form_title
+	background-color: black
+	text-align: center
+	border-radius: 5px
+	&_text
+		color: white
+		font-size: 26px
+		font-weight: 500
+.form_descr
+	margin: 15px 0
+	label
+		margin-right: 10px
+		margin-bottom: 10px
+		font-size: 16px
+		font-weight: 400
+	input[type="text"], input[type="password"], input[type="email"], input[type="tel"]
+		+input_first
+	input[type="submit"],
+	input[type="reset"]
+		+input_second
+		&:hover
+			color: black
+			background-color: white
+			transition: all 0.5s ease-out

@@ -9,6 +9,22 @@ nav
 	z-index: 2
 	background-color: rgba(0, 0, 0, .4)
 	text-align: center
+.show
+	display: block
+.hide
+	display: none
+.fade
+	animation-name: fade
+	animation-duration: 1.5s
+.fade
+	animation-name: fade
+	animation-duration: 1.5s
+
+	@keyframes fade
+		from
+			opacity: 0.1
+		to
+			opacity: 1
 .menu
 	display: flex
 	justify-content: space-between
@@ -20,7 +36,7 @@ nav
 		padding-right: 45px
 		&:last-child
 			border-right: none
-	&_link
+	&__link
 		text-decoration: none !important
 		color: #AFEEEE
 		font-size: 20px
@@ -28,8 +44,15 @@ nav
 		&:hover
 			color: #AFEEEE
 			text-decoration: none
-	&_active
+	&__active
 		color: red
 		border-bottom: 2px solid red
 		&:hover
 			color: red
+			animation-name: fade
+			animation-duration: 1.5s
+			@keyframes fade
+				from
+					opacity: 0.1
+				to
+					opacity: 1
